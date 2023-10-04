@@ -32,7 +32,7 @@ const Usuario = mongoose.model("Usuario", {
 app.use(bodyParser.json());
 
 // Rota para processar o cadastro do usuário
-app.post("/cadastrar-usuario", (req, res) => {
+app.post("/salvar-usuario", (req, res) => {
     const userData = req.body;
     const novoUsuario = new Usuario(userData);
 
@@ -49,5 +49,5 @@ app.post("/cadastrar-usuario", (req, res) => {
 app.use(express.static(path.join(__dirname, "public")))
 
 app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
+    console.log(`Servidor rodando na porta http://localhost/${port}`);
 });

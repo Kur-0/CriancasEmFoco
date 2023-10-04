@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Envie os dados para o servidor (backend)
         try {
-            const response = await fetch("/cadastrar-usuario", {
+            const response = await fetch("/salvar-usuario", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
